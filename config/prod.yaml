@@ -1,0 +1,11 @@
+config:
+subcomponents:
+  fluentbit:
+    config:
+      extraEntries:
+        output: |
+          [OUTPUT]
+            Name        azure
+            Match       *
+            Customer_ID abc
+            Shared_Key  xyz

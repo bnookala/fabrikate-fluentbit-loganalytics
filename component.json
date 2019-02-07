@@ -1,0 +1,13 @@
+{
+    "name": "fabrikate-fluentbit-loganalytics",
+    "generator": "static",
+    "path": "./manifests",
+    "subcomponents": [
+        {
+            "name": "fluentbit",
+            "generator": "helm",
+            "repo": "https://github.com/helm/charts",
+            "path": "stable/fluent-bit"
+        }
+    ]
+}
