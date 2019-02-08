@@ -3,9 +3,9 @@ subcomponents:
   fluentbit:
     config:
       extraEntries:
-        output: |
+        output: |-
           [OUTPUT]
-            Name        azure
-            Match       *
-            Customer_ID abc
-            Shared_Key  xyz
+              Name        azure
+              Match       *
+              Customer_ID workspaceid
+              Shared_Key  secretkey
