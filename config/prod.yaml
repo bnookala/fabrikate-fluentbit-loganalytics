@@ -2,10 +2,13 @@ config:
 subcomponents:
   fluentbit:
     config:
-      extraEntries:
-        output: |-
-          [OUTPUT]
-              Name        azure
-              Match       *
-              Customer_ID workspaceid
-              Shared_Key  secretkey
+      rawConfig: |-
+        @INCLUDE fluent-bit-service.conf
+        @INCLUDE fluent-bit-input.conf
+        @INCLUDE fluent-bit-filter.conf
+        @INCLUDE fluent-bit-output.conf
+        [OUTPUT]
+          Name        azure
+          Match       *
+          Customer_ID workspaceid
+          Shared_Key  secretkey
